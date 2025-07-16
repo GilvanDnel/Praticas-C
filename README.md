@@ -2,10 +2,6 @@
 
 Olá! Bem-vindo(a) ao meu repositório de exercícios em Linguagem C.
 
-[![GitHub license](https://img.shields.io/github/license/SEU_USUARIO_GITHUB/SEU_REPOSITORIO?style=for-the-badge)](https://github.com/SEU_USUARIO_GITHUB/SEU_REPOSITORIO/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/SEU_USUARIO_GITHUB/SEU_REPOSITORIO?style=for-the-badge)](https://github.com/SEU_USUARIO_GITHUB/SEU_REPOSITORIO/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/SEU_USUARIO_GITHUB/SEU_REPOSITORIO?style=for-the-badge)](https://github.com/SEU_USUARIO_GITHUB/SEU_REPOSITORIO/network/members)
-
 Este espaço é uma coleção de desafios de lógica de programação que venho praticando e aprimorando em C. Ele serve como um portfólio das minhas habilidades iniciais e meu progresso no desenvolvimento de algoritmos.
 
 Cada pasta contém um exercício específico, nomeado de forma descritiva para facilitar a localização e compreensão do problema abordado.
