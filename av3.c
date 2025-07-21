@@ -25,6 +25,9 @@ o expressões aritméticas para calcular totais,
 o operadores relacionais e lógicos nas verificações,
 o estruturas de repetição e controle de fluxo para o menu e as operações.*/
 
+
+
+
 #include <stdio.h>  // Inclui a biblioteca padrão para entrada e saída
 #include <string.h> // Inclui a biblioteca para manipulação de strings
 
@@ -49,6 +52,8 @@ int main()
     // Loop principal do menu
     do
     {
+
+        //mensagem de boas-vindas e opções do menu
         printf("\n###############################################");
         printf("\n#Desenvolvido por Andrew Moura e Gilvan Daniel#");
         printf("\n###############################################\n");
@@ -62,6 +67,10 @@ int main()
         scanf("%d", &opcao); // Lê a opção escolhida pelo usuário
         getchar();           // Limpa o buffer do teclado
 
+        
+        //inicio do switch para tratar as opções do menu
+        // A estrutura switch é usada para executar diferentes blocos de código com base na opção escolhida pelo usuário
+        // Cada case representa uma opção do menu, e o default trata casos inválidos
         switch (opcao)
         {
         case 1: // Se o usuario marcar a opção 1 o menu vai exibir estoque completo
@@ -77,7 +86,7 @@ int main()
             }
             break;
 
-            case 2: // Atualizar quantidade de um produto
+            case 2: //Se o usuario marcar a opção 2 o menu vai atualizar a quantidade de um produto
             {
                 int cat, prod, novaQuantidade; // Variáveis para armazenar a categoria, produto e nova quantidade
                 printf("\nAtualizar Quantidade de um Produto:\n");
@@ -99,7 +108,7 @@ int main()
             }
             break;
 
-            case 3: // Verificar produtos com estoque zero
+            case 3: //Se o usuario marcar a opção 3 o menu vai verificar se algum produto está com estoque zero
                 printf("\nProdutos com estoque zero:\n");
                 int encontrouZero = 0;
                 for (int i = 0; i < CATEGORIAS; i++) // Percorre as categorias
@@ -121,7 +130,7 @@ int main()
 
                 break;
 
-            case 4: // Exibir total de produtos por categoria
+            case 4: // Se o usuario marcar a opção 4 o menu vai exibir o total de produtos por categoria
                 printf("\nTotal de produtos por categoria:\n");
                 for (int i = 0; i < CATEGORIAS; i++) // Percorre as categorias
                 {
