@@ -40,7 +40,7 @@ int main()
     {
         printf("\nPessoa %d:\n", i + 1);
         printf("Idade: %d, Endereço: %p\n", idade[i], (void *)&idade[i]);
-        // Aqui usamos %p para imprimir o endereço de memória da variável idade
+        //  Aqui usamos %p para imprimir o endereço de memória da variável idade
         //  O (void*) é usado para garantir que o endereço seja impresso corretamente como ponteiro
         //  O & obtém o endereço de memória da variável idade, nome e altura
 
@@ -49,6 +49,8 @@ int main()
         // o * no void significa que estamos tratando o endereço como um ponteiro genérico no void o void* é um tipo de ponteiro que pode apontar para qualquer tipo de dado.
         printf("Altura: %.2f, Endereço: %p\n", altura[i], (void *)&altura[i]);
     }
+
+
 
     return 0; // Retorna 0 para indicar que o programa terminou com sucesso
 }
