@@ -21,8 +21,17 @@ struct Animal
     float peso;       // Peso do animal
 };
 
-int main()
+int main() // Função principal do programa
+
+// Declaração de variáveis
+
 {
+
+    printf("##############################################################\n");
+    printf("## Bem vindo ao sistema de Cadastro de Animais para Petshop ##\n");
+    printf("##          Desenvolvido por Gilvan Daniel da Silva         ##\n");
+    printf("##############################################################\n");
+
     struct Animal *animais; // Ponteiro para armazenar os animais
     int numAnimais = 0;     // Contador de animais cadastrados
     char continuar;         // Variável para controlar o loop de cadastro
@@ -38,24 +47,24 @@ int main()
     do
     {
         // Solicita os dados do animal
-        printf("Cadastro de Animal %d:\n", numAnimais + 1);
-        printf("Nome: ");
-        fgets(animais[numAnimais].nome, sizeof(animais[numAnimais].nome), stdin);
-        animais[numAnimais].nome[strcspn(animais[numAnimais].nome, "\n")] = 0; // Remove o newline
+        printf("Cadastro de Animal %d:\n", numAnimais + 1);                       // Exibe o número do animal a ser cadastrado
+        printf("Nome: ");                                                         // Solicita o nome do animal
+        fgets(animais[numAnimais].nome, sizeof(animais[numAnimais].nome), stdin); // Lê o nome do animal
+        animais[numAnimais].nome[strcspn(animais[numAnimais].nome, "\n")] = 0;    // Remove o newline com strcspn
 
-        printf("Espécie: ");
-        fgets(animais[numAnimais].especie, sizeof(animais[numAnimais].especie), stdin);
-        animais[numAnimais].especie[strcspn(animais[numAnimais].especie, "\n")] = 0;
+        printf("Espécie: ");                                                            // Solicita a espécie do animal
+        fgets(animais[numAnimais].especie, sizeof(animais[numAnimais].especie), stdin); // Lê a espécie do animal
+        animais[numAnimais].especie[strcspn(animais[numAnimais].especie, "\n")] = 0;    // Remove o newline com strcspn
 
-        printf("Raça: ");
-        fgets(animais[numAnimais].raca, sizeof(animais[numAnimais].raca), stdin);
-        animais[numAnimais].raca[strcspn(animais[numAnimais].raca, "\n")] = 0;
+        printf("Raça: ");                                                         // Solicita a raça do animal
+        fgets(animais[numAnimais].raca, sizeof(animais[numAnimais].raca), stdin); // Lê a raça do animal
+        animais[numAnimais].raca[strcspn(animais[numAnimais].raca, "\n")] = 0;    // Remove o newline com strcspn
 
-        printf("Idade: ");
-        scanf("%d", &animais[numAnimais].idade);
+        printf("Idade: ");                       // Solicita a idade do animal
+        scanf("%d", &animais[numAnimais].idade); // Lê a idade do animal
 
-        printf("Peso: ");
-        scanf("%f", &animais[numAnimais].peso);
+        printf("Peso: ");                       // Solicita o peso do animal
+        scanf("%f", &animais[numAnimais].peso); // Lê o peso do animal
 
         getchar(); // Limpa o buffer do teclado
 
@@ -63,22 +72,22 @@ int main()
 
         // Pergunta se deseja cadastrar outro animal
         printf("Deseja cadastrar outro animal? (s/n): ");
-        scanf("%c", &continuar);
-        getchar(); // Limpa o buffer do teclado
+        scanf("%c", &continuar); // Lê a resposta do usuário
+        getchar();               // Limpa o buffer do teclado
 
-    } while (continuar == 's' && numAnimais < MAX_ANIMAIS);
+    } while (continuar == 's' && numAnimais < MAX_ANIMAIS); // Continua o loop enquanto o usuário quiser cadastrar mais animais e não ultrapassar o limite
 
     // Exibe os dados dos animais cadastrados
     printf("\nAnimais Cadastrados:\n");
     for (int i = 0; i < numAnimais; i++)
     {
-        printf("Animal %d:\n", i + 1);
-        printf("Nome: %s\n", animais[i].nome);
-        printf("Espécie: %s\n", animais[i].especie);
-        printf("Raça: %s\n", animais[i].raca);
-        printf("Idade: %d anos\n", animais[i].idade);
-        printf("Peso: %.2f kg\n", animais[i].peso);
-        printf("-------------------------\n");
+        printf("Animal %d:\n", i + 1);                // Exibe o número do animal
+        printf("Nome: %s\n", animais[i].nome);        // Exibe o nome do animal
+        printf("Espécie: %s\n", animais[i].especie);  // Exibe a espécie do animal
+        printf("Raça: %s\n", animais[i].raca);        // Exibe a raça do animal
+        printf("Idade: %d anos\n", animais[i].idade); // Exibe a idade do animal
+        printf("Peso: %.2f kg\n", animais[i].peso);   // Exibe o peso do animal
+        printf("-------------------------\n");        // Linha de separação entre os animais
     }
     // Libera a memória alocada
     free(animais);
@@ -87,6 +96,10 @@ int main()
 
 /*
 README
+# Metodo de identação : "CTROL + , ", Selecionar opção format on save, assim o código será formatado automaticamente ao salvar.
+
+
+# AV4.C - Sistema de Cadastro de Animais para Petshop
 
 # Sistema de Cadastro de Animais para Petshop
 
@@ -124,8 +137,8 @@ Cada animal possui:
 - As strings são tratadas para remover o caractere de nova linha no final com uso de `strcspn`.
 - O programa utiliza `malloc` para alocação dinâmica de memória e `free` para liberar essa memória ao final.
 # AV4.C
-Este é um exemplo de um programa simples em C que demonstra o uso de estruturas, alocação dinâmica de memória, 
-e manipulação de strings para o cadastro de animais em um petshop. O programa permite que o usuário cadastre até 100 animais, 
+Este é um exemplo de um programa simples em C que demonstra o uso de estruturas, alocação dinâmica de memória,
+e manipulação de strings para o cadastro de animais em um petshop. O programa permite que o usuário cadastre até 100 animais,
 solicitando informações como nome, espécie, raça, idade e peso. Após o cadastro, os dados dos animais são exibidos de forma organizada.
 
 */
